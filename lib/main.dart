@@ -14,7 +14,13 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.amber,
       ),
       body: Center(
-        child: Image.asset('assets/lying.jpg'),
+        child: IconButton(
+            onPressed: () {
+              // ignore: avoid_print
+              print('how far?');
+            },
+            icon: const Icon(Icons.alternate_email),
+            color: Colors.amber),
       ),
       floatingActionButton: newMethod(),
     );
