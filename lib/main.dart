@@ -13,18 +13,21 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.amber,
       ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-        color: Colors.grey,
-        child: Center(
-          child: IconButton(
-              onPressed: () {
-                // ignore: avoid_print
-                print('how far?');
-              },
-              icon: const Icon(Icons.alternate_email),
-              color: Colors.amber),
-        ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          const Text('Hello Fam'),
+          TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                  backgroundColor: Colors.amber, foregroundColor: Colors.white),
+              child: const Text('Click Me')),
+          Container(
+            color: Colors.cyan,
+            padding: const EdgeInsets.all(30.0),
+            child: const Text('Inside Container'),
+          ),
+        ],
       ),
       floatingActionButton: newMethod(),
     );
